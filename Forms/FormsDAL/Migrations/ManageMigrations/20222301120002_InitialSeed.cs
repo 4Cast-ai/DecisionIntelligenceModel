@@ -26,18 +26,12 @@ namespace Model.Migrations
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 3, "Update" });
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 4, "Cancel" });
 
-                table = "FormsEvaluatedType";
-                columns = new[] { "EvaluatedTypeCode", "EvaluatedTypeName" };
+                table = "FormsEntityType";
+                columns = new[] { "EntityTypeCode", "EntityTypeName" };
                 colTypes = new string[] { "integer", "character varying" };
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 1, "Department" });
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 2, "Person" });
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 3, "Learning item" });
-
-                table = "FormsEvaluatorType";
-                columns = new[] { "EvaluatorTypeCode", "EvaluatorTypeName" };
-                colTypes = new string[] { "integer", "character varying" };
-                migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 1, "Identify" });
-                migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 2, "Anonymous" });
 
                 table = "FormsFormElementType";
                 columns = new[] { "FormElementTypeCode", "FormElementTypeName" };
@@ -73,18 +67,12 @@ namespace Model.Migrations
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 3, "מעודכן" });
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 4, "מבוטל" });
 
-                table = "FormsEvaluatedType";
-                columns = new[] { "EvaluatedTypeCode", "EvaluatedTypeName" };
+                table = "FormsEntityType";
+                columns = new[] { "EntityTypeCode", "EntityTypeName" };
                 colTypes = new string[] { "integer", "character varying" };
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 1, "יחידה" });
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 2, "אדם" });
                 migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 3, "לומדה" });
-
-                table = "FormsEvaluatorType";
-                columns = new[] { "EvaluatorTypeCode", "EvaluatorTypeName" };
-                colTypes = new string[] { "integer", "character varying" };
-                migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 1, "מזוהה" });
-                migrationBuilder.InsertData(table, columns, colTypes, values: new object[] { 2, "אנונימי" });
 
                 table = "FormsFormElementType";
                 columns = new[] { "FormElementTypeCode", "FormElementTypeName" };

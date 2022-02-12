@@ -44,6 +44,10 @@
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <Optimize>False</Optimize>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Services\FormService.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="api\index.html" />
@@ -52,7 +56,6 @@
   <ItemGroup>
     <EmbeddedResource Include="api\index.html" />
   </ItemGroup>
-
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />

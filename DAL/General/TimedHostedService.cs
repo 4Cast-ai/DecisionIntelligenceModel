@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Model.Data;
 using Model.Entities;
 using Newtonsoft.Json;
 using Npgsql;
@@ -78,17 +79,56 @@ namespace Dal.General
                 //loop all activities and check if date on
                 using (var DbContext = new Context())
                 {
-                    var activities = DbContext.Activity.Where(a => Util.ConvertStringToDate(a.StartDate) > DateTime.Now).ToList();
-                }
+                    var activities = DbContext.Activity.Where(a => a.Status.HasValue && a.Status.Value == (int)Model.Data.ActivityStatus.Draft /*&&
+                                                                (Util.ConvertStringToDate(a.StartDate)).Date == DateTime.Today*/).ToList();
 
-                //create activity object
-                string activity = null;
+                    FormsDataObject data = null;
+                    foreach (var activity in activities)
+                    {
+                        //create activity object
+                        data = new FormsDataObject()
+                        {
+                            ActivityGuid = activity.ActivityGuid,
+                            ActivityName = activity.Name,
+                            StartDate = activity.StartDate,
+                            EndDate = activity.EndDate,
+                            IsLimited = activity.ActivityTemplateGu.WithinTimeRange,
+                            CanSubmitOnce = activity.ActivityTemplateGu.SubmitOnlyOnce.Value,
+                            IsAnonymous = activity.AnonymousEvaluation
+                        };
 
-                using (var client = new HttpClient())
-                {
-                    string url = formsApiUrl + "api/FormsApi/handler/StartActivity";
-                    HttpContent c = new StringContent(JsonConvert.SerializeObject(activity), Encoding.UTF8, "application/json");
-                    var response = client.PostAsync(url, c).GetAwaiter().GetResult();
+                        if (activity.ActivityTemplateGu.EntityType == (int)EntityTypeEnum.Unit)
+                        {//unit
+                            data.EvaluatorList = (from aes in DbContext.ActivityEstimator
+                                                 join p in DbContext.Person on aes.EstimatedGuid equals p.PersonGuid
+                                                 join ae in DbContext.ActivityEntity on aes.ActivityEntity equals ae.ActivityEntityId
+                                                 where ae.ActivityGuid == activity.ActivityGuid
+                                                 select new Evaluator() { 
+                                                    EvaluatorGuid = aes.EstimatedGuid,
+                                                    //EvaluatorName = "",
+                                                    EvaluatorType = (int)EntityTypeEnum.Person,
+                                                    EvaluatorUnitGuid = "",
+                                                    Email = "",
+                                                    Phone = "",
+                                                    EvaluatedList = null
+                                                 }).ToList();
+                        }
+                        else
+                        {//person
+                            data.EvaluatorList = null;
+                        }
+
+                        using (var client = new HttpClient())
+                        {
+                            string url = formsApiUrl + "api/FormsHandlerApi/Event/CreateEvent";
+                            HttpContent c = new StringContent(JsonConvert.SerializeObject(data), Encoding.UTF8, "application/json");
+                            var response = client.PostAsync(url, c).GetAwaiter().GetResult();
+                        }
+
+                        activity.Status = (int)Model.Data.ActivityStatus.InProcess;
+                        DbContext.Activity.Update(activity);
+                        DbContext.SaveChanges();
+                    }
                 }
             }
             catch (Exception ex)

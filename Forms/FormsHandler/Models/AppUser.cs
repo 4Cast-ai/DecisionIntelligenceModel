@@ -49,12 +49,12 @@ namespace FormsHandler.Models
             RoleId = user.RoleId;
             SecurityStamp = Guid.NewGuid().ToString();
 
-            RolePermissions = user.RolePermissions;
-            RoleItems = user.RoleItems;
+            //RolePermissions = user.RolePermissions;
+            //RoleItems = user.RoleItems;
 
-            userPreference = new UserPreference();
-            userPreference.UserTheme = user.userPreference.UserTheme;
-            userPreference.UserLayOut = user.userPreference.UserLayOut;
+            //userPreference = new UserPreference();
+            //userPreference.UserTheme = user.userPreference.UserTheme;
+            //userPreference.UserLayOut = user.userPreference.UserLayOut;
 
         }
 

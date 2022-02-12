@@ -4,17 +4,22 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System;
 using Infrastructure.Core;
+using Model.Data;
+using Model.Entities;
+using Infrastructure.Helpers;
 
 namespace FormsDal.Services
 {
     public class FormsDBServices : BaseService
     {
         private readonly string strTPCConnectionWithoutDB;
+        private readonly string strTPCConnectionForManager;
 
         public FormsDBServices()
         {
             //Logger = logger;
             strTPCConnectionWithoutDB = GeneralContext.GetConnectionString("FormsSurveyDBStart");
+            strTPCConnectionForManager = GeneralContext.GetConnectionString("FormsManageDB");
         }
 
         private FormsDynamicDBManager GetFormsSurveyDBManager(string DynamicDBConection)
@@ -22,13 +27,74 @@ namespace FormsDal.Services
             return new FormsDynamicDBManager(DynamicDBConection);
         }
 
-        public async Task<bool> CreateFormsSurveyDB(string DynamicDBName)
+        private FormsManageDBManager GetManagerDBManager(string connection)
+        {
+            return new FormsManageDBManager(connection);
+        }
+
+        public async Task<bool> CreateDynamicDB(string DynamicDBName)
         {
             string dynamicDBConection = strTPCConnectionWithoutDB + DynamicDBName;
             using (FormsDynamicDBManager formsSurveyDBManager = GetFormsSurveyDBManager(dynamicDBConection))
             {
                 formsSurveyDBManager.CreateDB();
             }
+            return true;
+        }
+
+        private FormsActivityTrace SetNewActivity(FormsDataObject eventData, int FormsDBID, string FormDBName)
+        {
+            DateTime todayDate = DateTime.Now;
+
+            string todayDateStr = Util.ConvertDateToString(todayDate);
+
+            FormsActivityTrace formsActivityTrace = new FormsActivityTrace
+            {
+                ActivityGuid = eventData.ActivityGuid,
+                ActivityName = eventData.ActivityName,
+                ActivityEndDate = eventData.EndDate,
+                ActivityStartDate = eventData.StartDate,
+                RecordStatusCode = 1, //TODO: Maya  להחליף לenum 
+                CanSubmitOnce = eventData.CanSubmitOnce,
+                IsAnonymous = eventData.IsAnonymous,
+                IsLimited = eventData.IsLimited,
+                FromEffectDate = todayDateStr, //TODO: set the correct field
+                ToEffectDate = todayDateStr, //TODO: set the correct field
+                CreationDate = todayDateStr,
+                UpdateDate = todayDateStr,
+                UpdateUserId = null,
+                EvaluatedAndEvaluators = null, //TODO: set the correct field
+                Forms = null,   //TODO: set the correct field
+                FormsDBID = FormsDBID,
+                FormsDBName = FormDBName
+            };
+            return formsActivityTrace;
+        }
+
+        public async Task<bool> CreateEvent(FormsDataObject eventData)
+        {
+            bool isActivityExist = false;
+            using (FormsManageDBManager formsManageDBManager = GetManagerDBManager(strTPCConnectionForManager))
+            {
+                isActivityExist = formsManageDBManager.IsActivityExist(eventData.ActivityGuid);
+            }
+
+            if (!isActivityExist)
+            {
+                FormsActivityTrace formsActivity = SetNewActivity(eventData, 1, "ChangeMe");
+
+                using (FormsManageDBManager formsManageDBManager = GetManagerDBManager(strTPCConnectionForManager))
+                {
+                    decimal activityKey = formsManageDBManager.SaveActivity(formsActivity);
+                }
+
+                string dynamicDBConection = strTPCConnectionWithoutDB + eventData.ActivityName;
+                using (FormsDynamicDBManager formsSurveyDBManager = GetFormsSurveyDBManager(dynamicDBConection))
+                {
+                    formsSurveyDBManager.CreateDB();
+                }
+            }
+           
             return true;
         }
 

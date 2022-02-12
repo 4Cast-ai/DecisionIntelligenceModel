@@ -9,13 +9,16 @@ using System.Threading.Tasks;
 using MeasuringUnitData = Model.Data.MeasuringUnitData;
 using RollupMethodInfo = Model.Data.RollupMethodInfo;
 using CalenderRollupData = Model.Data.CalenderRollupData;
+using Microsoft.AspNetCore.Authorization;
+using Swashbuckle.AspNetCore.Annotations;
+using Infrastructure.Controllers;
 
 namespace FormsDal.Controllers
 {
     [Route("api/DalApi/[controller]")]
-    [EnableCors(PolicyTypes.ApiCorsPolicy)]
+    //[EnableCors(PolicyTypes.ApiCorsPolicy)]
     [ApiController]
-    public class FormsDBController : ControllerBaseAction
+    public class FormsDBController : GeneralControllerBase
     {
         private readonly FormsDBServices _formsDBServices;
 
@@ -24,21 +27,17 @@ namespace FormsDal.Controllers
             _formsDBServices = FormsDBServices;
         }
 
-        #region Get
-
-        [HttpGet("CreateSurvey")]
-        public async Task<IActionResult> CreateSurvey()
-        {
-            var created =  await _formsDBServices.CreateFormsSurveyDB("FormsSurveyDB_Maya02");
-            return await _formsDBServices.OkResult(created);
-        }
+        #region Post
 
         [HttpPost("CreateEvent")]
-        public async Task<bool> CreateEvent([FromBody] EventDataObject eventData)
+        [SwaggerOperation(Summary = "", Description = "CreateEvent")]
+        public async Task<bool> CreateEvent([FromBody]FormsDataObject eventData)
         {
-            var result = true;
-            return result;
-
+            int i = 1;
+            //var created = await _formsDBServices.CreateFormsSurveyDB("FormsDynamicDB_Maya07");
+            var created = await _formsDBServices.CreateEvent(eventData);
+            var result = await _formsDBServices.OkResult(created);
+            return created;
         }
 
         #endregion Get

@@ -35,15 +35,7 @@ namespace Events.Controllers
             return result;
         }
         
-        [HttpGet("GetOrgObjActivitiesForFiller")]
-        [SwaggerOperation(Description = "Get OrgObj activities")]
-        public async Task<List<ActivityDetails>> GetOrgObjActivitiesForFiller(string org_obj_guid)
-        {
-            string url = $"General/GetOrgObjActivitiesForFiller?org_obj_guid={org_obj_guid}";
-            var result = await DBGate.GetAsync<List<ActivityDetails>>(url);
-            return result;
-        }
-
+       
         
        //[HttpGet("GetFormsDataForFiller")]
        // [SwaggerOperation(Description = "Get OrgObj activities")]
@@ -82,7 +74,7 @@ namespace Events.Controllers
 
         [HttpPost("SaveActivity")]
         [SwaggerOperation(Description = "Save activity")]
-        public async Task<string> SaveActivity([FromBody](ActivityDetails activity_data, List<Participant> participants)[] data)
+        public async Task<string> SaveActivity([FromBody](ActivityDetails activity_data, List<Evaluated> Evaluateds)[] data)
         {
             string result = await DBGate.PostAsync<string>("Activity/SaveActivity", data);
             return result;

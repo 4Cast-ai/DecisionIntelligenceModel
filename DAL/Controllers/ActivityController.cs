@@ -83,13 +83,13 @@ namespace Dal.Controllers
         #region Activity
 
         [HttpPost("SaveActivity")]
-        public async Task<IActionResult> SaveActivity([FromBody] (ActivityDetails activity_data, List<Participant> participants)[] data)
+        public async Task<IActionResult> SaveActivity([FromBody] (ActivityDetails activity_data, List<ClientEvaluated> Evaluateds)[] data)
         {
             string result = string.Empty;
 
             foreach (var item in data)
             {
-                result += await _activityService.SaveActivity(item.activity_data, item.participants); 
+                result += await _activityService.SaveActivity(item.activity_data, item.Evaluateds); 
             }
 
             return await _activityService.OkResult(result);

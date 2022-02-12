@@ -2,7 +2,11 @@
 using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Model.Entities;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace FormsDal.Services
 {
@@ -40,7 +44,6 @@ namespace FormsDal.Services
             try
             {
                 isExist = contextDB.Database.CanConnect();
-                // isExist = (contextDB.Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists();
             }
             catch (Exception ex)
             {
@@ -48,6 +51,45 @@ namespace FormsDal.Services
             }
             return isExist;
         }
+
+        public bool IsActivityExist(string ActivityGuid)
+        {
+            bool isExist = false;
+            try
+            {
+                var activities = contextDB.Set<FormsActivityTrace>().Where(x => x.ActivityGuid == ActivityGuid).ToList();
+                if (activities.Any())
+                    isExist = true;
+
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+            return isExist;
+        }
+
+        public decimal SaveActivity(FormsActivityTrace formsActivity)
+        {
+            decimal isExist = -2;
+            try
+            {
+                if (formsActivity != null)
+                {
+                    contextDB.Add(formsActivity);
+                    contextDB.SaveChanges();
+                    return formsActivity.ActivityTraceId;
+                }
+                return -1;
+
+            }
+            catch (Exception ex)
+            {
+                Console.Write(ex.Message);
+            }
+            return isExist;
+        }
+
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)

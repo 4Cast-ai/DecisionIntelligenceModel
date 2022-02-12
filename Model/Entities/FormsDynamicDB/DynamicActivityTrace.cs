@@ -3,15 +3,14 @@ using System.Collections.Generic;
 
 namespace Model.Entities
 {
-    public partial class FormsActivityTrace
+    public partial class DynamicActivityTrace
     {
-        public long ActivityTraceId { get; set; }
-        public string? ActivityGuid { get; set; }
+        public string ActivityGuid { get; set; } = null!;
         public string? ActivityName { get; set; }
         public string? ActivityStartDate { get; set; }
         public string? ActivityEndDate { get; set; }
         public bool IsLimited { get; set; }
-        public bool CanSubmitOnce { get; set; }
+        public bool CanSubmitOnce_ { get; set; }
         public bool IsAnonymous { get; set; }
         public string? CreationDate { get; set; }
         public string? UpdateDate { get; set; }
@@ -24,6 +23,6 @@ namespace Model.Entities
         public int? FormsDBID { get; set; }
         public string? FormsDBName { get; set; }
 
-        public virtual FormsRecordStatus RecordStatusCodeNavigation { get; set; } = null!;
+        public virtual DynamicRecordStatus RecordStatusCodeNavigation { get; set; } = null!;
     }
 }

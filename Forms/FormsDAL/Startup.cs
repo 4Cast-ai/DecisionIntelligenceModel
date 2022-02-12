@@ -96,18 +96,18 @@ namespace FormsDal
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 
             // REST http clients
-            services.AddHttpClient<GeneralHttpClient>("CalcApi",
-                httpClient =>
-                {
-                    var endpoint = Configuration.GetSection("AppConfig:Endpoints:CalcApi").Value;
-                    httpClient.BaseAddress = new Uri(endpoint);
-                    httpClient.DefaultRequestHeaders.Add("User-Agent", appConfig.Domain);
-                    httpClient.DefaultRequestHeaders.Add("X-Named-Client", "CalcApi");
-                    httpClient.DefaultRequestHeaders.AddFromRequest("Authorization");
-                    httpClient.DefaultRequestHeaders.AddFromRequest("Accept-Language");
-                    var isCustomTimeout = double.TryParse(appConfig.ResponseTimeout, out double apiResponseTimeout);
-                    httpClient.Timeout = TimeSpan.FromMinutes(isCustomTimeout ? apiResponseTimeout : 10);
-                });
+            //services.AddHttpClient<GeneralHttpClient>("CalcApi",
+            //    httpClient =>
+            //    {
+            //        var endpoint = Configuration.GetSection("AppConfig:Endpoints:CalcApi").Value;
+            //        httpClient.BaseAddress = new Uri(endpoint);
+            //        httpClient.DefaultRequestHeaders.Add("User-Agent", appConfig.Domain);
+            //        httpClient.DefaultRequestHeaders.Add("X-Named-Client", "CalcApi");
+            //        httpClient.DefaultRequestHeaders.AddFromRequest("Authorization");
+            //        httpClient.DefaultRequestHeaders.AddFromRequest("Accept-Language");
+            //        var isCustomTimeout = double.TryParse(appConfig.ResponseTimeout, out double apiResponseTimeout);
+            //        httpClient.Timeout = TimeSpan.FromMinutes(isCustomTimeout ? apiResponseTimeout : 10);
+            //    });
 
             // Authorization
             services.AddAuthorization(options =>
@@ -128,7 +128,7 @@ namespace FormsDal
             services
                 .AddMvc(options =>
                 {
-                    options.InputFormatters.Insert(0, new RawRequestBodyFormatter());
+                    //options.InputFormatters.Insert(0, new RawRequestBodyFormatter());
                     options.Filters.Add(typeof(ApiExceptionFilter));
                     options.Filters.Add(typeof(ApiValidationFilter));
                 })
@@ -139,10 +139,10 @@ namespace FormsDal
                     config.RunDefaultMvcValidationAfterFluentValidationExecutes = false;
                 });
 
-            services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(options =>
-            {
-                options.MultipartBodyLengthLimit = long.MaxValue;
-            });
+            //services.Configure<Microsoft.AspNetCore.Http.Features.FormOptions>(options =>
+            //{
+            //    options.MultipartBodyLengthLimit = long.MaxValue;
+            //});
 
             // model state validation
             services.Configure<ApiBehaviorOptions>(options =>
@@ -172,6 +172,8 @@ namespace FormsDal
 
             services.AddSwaggerGen(c =>
             {
+                c.EnableAnnotations();
+
                 c.SwaggerDoc("v2", new OpenApiInfo { Title = "Data Access Layer WebAPI", Version = "v 2.0.0" });
 
                 if (authOptions.AuthenticationType == "Bearer")
@@ -224,11 +226,11 @@ namespace FormsDal
 
             // logic services
 
-            services.AddScoped<GeneralService>();
+            services.AddScoped<FormsGeneralService>();
             //services.AddScoped<FormsSurveyDBManager>();
             services.AddScoped<FormsDBServices>();
-            services.AddScoped<EventService>();
-            
+            services.AddScoped<FormsEventService>();
+
             services.AddScoped(serviceProvider =>
             {
                 IStringLocalizerFactory factory = serviceProvider.GetService<IStringLocalizerFactory>();
@@ -386,7 +388,7 @@ namespace FormsDal
                 c.IndexStream = () => GetType().Assembly.GetManifestResourceStream("FormsDal.api.index.html");
                 c.RoutePrefix = "api";
                 c.SwaggerEndpoint("/swagger/v2/swagger.json", $"{Assembly.GetEntryAssembly().GetName().Name}");
-                c.DocumentTitle = "4cast Data Access Layer WebAPI";
+                c.DocumentTitle = "Forms Data Access Layer WebAPI";
                 c.OAuthUsePkce();
                 c.DocExpansion(Swashbuckle.AspNetCore.SwaggerUI.DocExpansion.None);
                 c.EnableFilter();

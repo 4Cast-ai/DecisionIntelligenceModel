@@ -53,6 +53,12 @@ namespace Infrastructure.Controllers
         /// <summary> Current EmsInterface http rest client for access to Ems interface Api </summary>
         public GeneralHttpClient InterfaceApi => _InterfaceClient.Value;
 
+
+        private readonly Lazy<GeneralHttpClient> _FormsHandlerClient = new Lazy<GeneralHttpClient>(() => GeneralContext.CreateRestClient(ApiServiceNames.FormsHandlerApi));
+        /// <summary> Current EmsInterface http rest client for access to Ems interface Api </summary>
+        public GeneralHttpClient FormsHandlerApi => _FormsHandlerClient.Value;
+
+
         #endregion Rest api clients
     }
 }

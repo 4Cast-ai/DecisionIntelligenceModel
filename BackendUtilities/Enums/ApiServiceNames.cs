@@ -17,6 +17,8 @@ namespace Infrastructure.Enums
         [Display(Name = "InterfaceApi", Description = "InterfaceApi endpoint ", ResourceType = typeof(string))]
         InterfaceApi,
         [Display(Name = "DalApi", Description = "DBGateApi endpoint ", ResourceType = typeof(string))]
-        DalApi
+        DalApi,
+        [Display(Name = "FormsHandlerApi", Description = "FormsHandlerApi endpoint ", ResourceType = typeof(string))]
+        FormsHandlerApi
     }
 }

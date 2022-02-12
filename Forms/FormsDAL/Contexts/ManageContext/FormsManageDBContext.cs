@@ -19,13 +19,11 @@ namespace FormsDal.Contexts
         }
 
         public virtual DbSet<FormsActivityTrace> FormsActivityTraces { get; set; } = null!;
-        public virtual DbSet<FormsEvaluatedType> FormsEvaluatedTypes { get; set; } = null!;
-        public virtual DbSet<FormsEvaluatorType> FormsEvaluatorTypes { get; set; } = null!;
+        public virtual DbSet<FormsEntityType> FormsEntityTypes { get; set; } = null!;
         public virtual DbSet<FormsFormElementType> FormsFormElementTypes { get; set; } = null!;
         public virtual DbSet<FormsMeasureUnitType> FormsMeasureUnitTypes { get; set; } = null!;
         public virtual DbSet<FormsObjectiveType> FormsObjectiveTypes { get; set; } = null!;
         public virtual DbSet<FormsRecordStatus> FormsRecordStatuses { get; set; } = null!;
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
@@ -42,6 +40,12 @@ namespace FormsDal.Contexts
 
                 entity.ToTable("FormsActivityTrace");
 
+                entity.HasIndex(e => e.RecordStatusCode, "IX_FormsActivityTrace_RecordStatusCode");
+
+                entity.Property(e => e.ActivityTraceId)
+                    .UseIdentityAlwaysColumn()
+                    .HasIdentityOptions(null, null, null, 99999999999999L);
+
                 entity.Property(e => e.ActivityEndDate).HasMaxLength(14);
 
                 entity.Property(e => e.ActivityGuid).HasMaxLength(50);
@@ -49,8 +53,6 @@ namespace FormsDal.Contexts
                 entity.Property(e => e.ActivityName).HasMaxLength(255);
 
                 entity.Property(e => e.ActivityStartDate).HasMaxLength(14);
-
-                entity.Property(e => e.CanSubmitOnce_).HasColumnName("CanSubmitOnce ");
 
                 entity.Property(e => e.CreationDate).HasMaxLength(14);
 
@@ -75,28 +77,16 @@ namespace FormsDal.Contexts
                     .HasConstraintName("RecordStatusCode_FK");
             });
 
-            modelBuilder.Entity<FormsEvaluatedType>(entity =>
+            modelBuilder.Entity<FormsEntityType>(entity =>
             {
-                entity.HasKey(e => e.EvaluatedTypeCode)
+                entity.HasKey(e => e.EntityTypeCode)
                     .HasName("EvaluatedType_pkey");
 
-                entity.ToTable("FormsEvaluatedType");
+                entity.ToTable("FormsEntityType");
 
-                entity.Property(e => e.EvaluatedTypeCode).ValueGeneratedNever();
+                entity.Property(e => e.EntityTypeCode).ValueGeneratedNever();
 
-                entity.Property(e => e.EvaluatedTypeName).HasMaxLength(255);
-            });
-
-            modelBuilder.Entity<FormsEvaluatorType>(entity =>
-            {
-                entity.HasKey(e => e.EvaluatorTypeCode)
-                    .HasName("EvaluatorType_pkey");
-
-                entity.ToTable("FormsEvaluatorType");
-
-                entity.Property(e => e.EvaluatorTypeCode).ValueGeneratedNever();
-
-                entity.Property(e => e.EvaluatorTypeName).HasMaxLength(255);
+                entity.Property(e => e.EntityTypeName).HasMaxLength(255);
             });
 
             modelBuilder.Entity<FormsFormElementType>(entity =>
@@ -146,6 +136,8 @@ namespace FormsDal.Contexts
 
                 entity.Property(e => e.RecordStatusName).HasMaxLength(255);
             });
+
+            modelBuilder.HasSequence("ActivityTraceIdSeq").StartsAt(3);
 
             OnModelCreatingPartial(modelBuilder);
         }

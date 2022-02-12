@@ -101,20 +101,20 @@ namespace Dal.Services
         //    return true;
         //}
 
-        public async Task<string> SaveActivity(ActivityDetails activity_data, List<Participant> participants)
+        public async Task<string> SaveActivity(ActivityDetails activity_data, List<ClientEvaluated> Evaluateds)
         {
             string guid;
 
             if (activity_data.activity_guid == null)
-                guid = await CreateActivity(activity_data, participants);
+                guid = await CreateActivity(activity_data, Evaluateds);
             else
-                guid = await UpdateActivity(activity_data, participants); 
+                guid = await UpdateActivity(activity_data, Evaluateds); 
                
 
             return guid;
         }
 
-        public async Task<string> CreateActivity(ActivityDetails activity_data, List<Participant> participants)
+        public async Task<string> CreateActivity(ActivityDetails activity_data, List<ClientEvaluated> Evaluateds)
         {
             string guid = string.Empty;
 
@@ -144,19 +144,19 @@ namespace Dal.Services
 
             ActivityEntity activityEntity = null;
             ActivityEstimator activityEstimator = null;
-            foreach (var participant in participants)
+            foreach (var Evaluated in Evaluateds)
             {
                 activityEntity = new ActivityEntity
                 {
-                    EntityGuid = participant.EvaluatedGuid,
-                    EntityType = participant.EvaluatedType,
+                    EntityGuid = Evaluated.EvaluatedGuid,
+                    EntityType = Evaluated.EvaluatedType,
                     ActivityGuid = activity.ActivityGuid
                 };
 
                 DbContext.ActivityEntity.Add(activityEntity);
                 DbContext.SaveChanges();
 
-                foreach (var evaluator in participant.EvaluatorList)
+                foreach (var evaluator in Evaluated.EvaluatorList)
                 {
                     activityEstimator = new ActivityEstimator
                     {
@@ -209,7 +209,7 @@ namespace Dal.Services
             return guid;
         }
 
-        public async Task<string> UpdateActivity(ActivityDetails activity_data, List<Participant> participants)
+        public async Task<string> UpdateActivity(ActivityDetails activity_data, List<ClientEvaluated> Evaluateds)
         {
             string guid = string.Empty;
 

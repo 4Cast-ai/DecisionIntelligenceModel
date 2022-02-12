@@ -97,6 +97,13 @@ namespace Model.Data
         Authorized = 4
     }
 
+    public enum ActivityStatus
+    {
+        Draft = 1,
+        InProcess = 2,
+        Ended = 3
+    }
+
     [Serializable]
     public enum ReportTypes
     {

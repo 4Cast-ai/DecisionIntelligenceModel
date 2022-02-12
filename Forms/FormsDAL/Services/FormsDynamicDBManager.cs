@@ -40,7 +40,6 @@ namespace FormsDal.Services
             try
             {
                 isExist = contextDB.Database.CanConnect();
-                // isExist = (contextDB.Database.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists();
             }
             catch (Exception ex)
             {

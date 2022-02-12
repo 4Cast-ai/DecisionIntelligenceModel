@@ -15,6 +15,7 @@ using Infrastructure.Models;
 using Model.Data;
 using Model.Entities;
 using System.Collections.Generic;
+using Infrastructure.Helpers;
 
 namespace FormsHandler.Controllers
 {
@@ -51,5 +52,6 @@ namespace FormsHandler.Controllers
             var result = await DBGate.GetAsync<string>(url);
             return result;
         }
+       
     }
 }
