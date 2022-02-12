@@ -1,0 +1,96 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <UserSecretsId>ac9db721-62c7-4d3a-b763-d94e89f93254</UserSecretsId>
+	<VersionSuffix Condition="'VersionNumber'!='?.?.?'">alfa</VersionSuffix>
+	<VersionNumber Condition="'VersionNumber'!='?.?.?'">0.0.0</VersionNumber>
+	<patch>$([System.DateTime]::UtcNow.ToString(ddMM))</patch>
+	<VersionPrefix>$(VersionNumber).$(patch)</VersionPrefix>
+	<InformationalVersion>$(VersionNumber).$(patch).$(VersionSuffix)</InformationalVersion>
+    <Authors>4Cast LTD</Authors>
+    <Company>4Cast LTD</Company>
+    <Product> Calculator Service</Product>
+    <Description> Calculator Service</Description>
+    <Copyright>Copyright ©  2019</Copyright>
+    <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+    <RunAnalyzersDuringBuild>false</RunAnalyzersDuringBuild>
+    <EnableNETAnalyzers>false</EnableNETAnalyzers>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  
+
+  <ItemGroup>
+    <None Remove="api\index.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="api\index.html" />
+  </ItemGroup>
+  
+  
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+    <PackageReference Include="BackendUtilities" Version="*" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.1" />
+    <PackageReference Include="Model" Version="*" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0-rc.1.21452.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0-rc.1.21452.15" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Language" Version="6.0.0-rc.1.21452.15" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0-rc.1.21451.13" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.13.1" />
+    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Serilog.AspNetCore" Version="4.1.1-dev-00229" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="4.1.2" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.3.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1-dev-00876" />
+    <PackageReference Include="Sprache" Version="3.0.0-develop-00049" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUi" Version="6.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AppData\**">
+      <CopyToOutputDirectory>always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Update="localhost.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+ <ItemGroup>
+    <None Update="Calculator.pfx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+ <ItemGroup>
+   <Folder Include="Logs\" />
+ </ItemGroup>
+</Project>

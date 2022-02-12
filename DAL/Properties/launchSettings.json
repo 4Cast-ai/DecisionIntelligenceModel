@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "DAL": {
+      "commandName": "Project",
+      "launchUrl": "/swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": ""
+    }
+  }
+}

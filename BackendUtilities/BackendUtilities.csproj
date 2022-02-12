@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+	<Platforms>AnyCPU;x64;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <DisableImplicitNamespaceImports>true</DisableImplicitNamespaceImports>
+	<VersionNumber Condition="'VersionNumber'!='?.?.?'">0.0.0</VersionNumber>
+	<patch>$([System.DateTime]::UtcNow.ToString(ddMM))</patch>
+	<VersionPrefix>$(VersionNumber)</VersionPrefix>
+	<InformationalVersion>$(VersionNumber).$(patch)</InformationalVersion>
+    <Authors>4Cast</Authors>
+    <Company>4Cast Solutions LTD</Company>
+    <Product>DAL Utilities</Product>
+    <Description>Utilities contains: Compress, Converts, Encrypt/Decrypt, Json and Token helpers</Description>
+    <Copyright>Copyright ©  2019</Copyright>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0-rc.1.21452.15" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.1" />
+    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.0" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.0.1-dev-00876" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.2.2" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.13.1" />
+  </ItemGroup>
+</Project>

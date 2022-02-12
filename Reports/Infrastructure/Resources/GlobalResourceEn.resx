@@ -1,0 +1,1119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutSystem" xml:space="preserve">
+    <value>Computerized assessment system</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="Activation" xml:space="preserve">
+    <value>Activation</value>
+  </data>
+  <data name="ActiveEvents" xml:space="preserve">
+    <value>Active Events</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="AddCommanderIndexText" xml:space="preserve">
+    <value>Add Commander Index Text</value>
+  </data>
+  <data name="AddGroupTable" xml:space="preserve">
+    <value>Add Group Table</value>
+  </data>
+  <data name="AddNewParticipant" xml:space="preserve">
+    <value>Add New Participant</value>
+  </data>
+  <data name="AddParticipant" xml:space="preserve">
+    <value>Add Participant</value>
+  </data>
+  <data name="AddRow" xml:space="preserve">
+    <value>Add Row</value>
+  </data>
+  <data name="AllRowsRequired" xml:space="preserve">
+    <value>All Rows Required</value>
+  </data>
+  <data name="AllUnit" xml:space="preserve">
+    <value>All unit model</value>
+  </data>
+  <data name="Answers" xml:space="preserve">
+    <value>Answers</value>
+  </data>
+  <data name="Array" xml:space="preserve">
+    <value>Array</value>
+  </data>
+  <data name="AssigningGroup" xml:space="preserve">
+    <value>Assigning for group</value>
+  </data>
+  <data name="Average" xml:space="preserve">
+    <value>Average</value>
+  </data>
+  <data name="BackToEventList" xml:space="preserve">
+    <value>Back To Event List</value>
+  </data>
+  <data name="BackToSubject" xml:space="preserve">
+    <value>Back To Subject</value>
+  </data>
+  <data name="BringDown" xml:space="preserve">
+    <value>Bring Down</value>
+  </data>
+  <data name="BringUp" xml:space="preserve">
+    <value>Bring Up</value>
+  </data>
+  <data name="CalculationRule" xml:space="preserve">
+    <value>Calculation rule</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Canceling" xml:space="preserve">
+    <value>Canceling</value>
+  </data>
+  <data name="CandidateExistsInPotential" xml:space="preserve">
+    <value>Candidate Exists In Potential</value>
+  </data>
+  <data name="Candidates" xml:space="preserve">
+    <value>Candidates</value>
+  </data>
+  <data name="CandidatesList" xml:space="preserve">
+    <value>Candidates List</value>
+  </data>
+  <data name="CantDeleteRoot" xml:space="preserve">
+    <value>Cant Delete Root</value>
+  </data>
+  <data name="ChangeSubjecTree" xml:space="preserve">
+    <value>This form has related questions to subjects, a change in the subjects tree will unlink the questions to the subjects</value>
+  </data>
+  <data name="Chapter" xml:space="preserve">
+    <value>Chapter</value>
+  </data>
+  <data name="ChapterList" xml:space="preserve">
+    <value>Chapter List</value>
+  </data>
+  <data name="ChapterName" xml:space="preserve">
+    <value>Chapter Name</value>
+  </data>
+  <data name="ChapterNumber" xml:space="preserve">
+    <value>Chapter Number</value>
+  </data>
+  <data name="ChaptersEditing" xml:space="preserve">
+    <value>Chapters Editing</value>
+  </data>
+  <data name="ChapterType" xml:space="preserve">
+    <value>Chapter Type</value>
+  </data>
+  <data name="Choices" xml:space="preserve">
+    <value>Choices</value>
+  </data>
+  <data name="Choose" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="ChooseChapterType" xml:space="preserve">
+    <value>Choose Chapter Type</value>
+  </data>
+  <data name="ChooseOptions" xml:space="preserve">
+    <value>Choose one options</value>
+  </data>
+  <data name="Closure" xml:space="preserve">
+    <value>Closure</value>
+  </data>
+  <data name="Collapse" xml:space="preserve">
+    <value>Collapse</value>
+  </data>
+  <data name="CollapseAll" xml:space="preserve">
+    <value>Collapse All</value>
+  </data>
+  <data name="CommanderIndex" xml:space="preserve">
+    <value>Commander Index</value>
+  </data>
+  <data name="CommanderIndex1" xml:space="preserve">
+    <value>Commander Index 1</value>
+  </data>
+  <data name="CommanderIndex2" xml:space="preserve">
+    <value>Commander Index 2</value>
+  </data>
+  <data name="CommanderIndexes" xml:space="preserve">
+    <value>Commander Indexes</value>
+  </data>
+  <data name="CommanderIndexText" xml:space="preserve">
+    <value>Commander Index Text</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete?</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>All rights reserved</value>
+  </data>
+  <data name="Corp" xml:space="preserve">
+    <value>Corp</value>
+  </data>
+  <data name="CreateNewEvent" xml:space="preserve">
+    <value>Create New Event</value>
+  </data>
+  <data name="CreateNewSeason" xml:space="preserve">
+    <value>Create New Season</value>
+  </data>
+  <data name="CreateNewTestDescription" xml:space="preserve">
+    <value>Create New {0} Description By entering the details.</value>
+  </data>
+  <data name="CreateNewTestScreen" xml:space="preserve">
+    <value>Create New {0}</value>
+  </data>
+  <data name="CurrentOrganiztion" xml:space="preserve">
+    <value>Current Organiztion</value>
+  </data>
+  <data name="DateDistribute" xml:space="preserve">
+    <value>Date Distribute</value>
+  </data>
+  <data name="ddlChooseItem" xml:space="preserve">
+    <value>-Choose-</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="DefiningPotential" xml:space="preserve">
+    <value>Defining Potential</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="DeletedNotification" xml:space="preserve">
+    <value>Deletion completed successfully!</value>
+  </data>
+  <data name="DeleteForm" xml:space="preserve">
+    <value>Delete Form</value>
+  </data>
+  <data name="DeleteParticipant" xml:space="preserve">
+    <value>Delete Participant</value>
+  </data>
+  <data name="DeleteUnitWarnning" xml:space="preserve">
+    <value>Deleting units will change the unit of candidates associated with these units</value>
+  </data>
+  <data name="Deleting" xml:space="preserve">
+    <value>Deleting</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DisplayQuestionnaire" xml:space="preserve">
+    <value>Display Questionnaire</value>
+  </data>
+  <data name="DisplayQuestionnaireText" xml:space="preserve">
+    <value>Display Questionnaire Text</value>
+  </data>
+  <data name="DistributeQuestionnaires" xml:space="preserve">
+    <value>Distribute Questionnaires</value>
+  </data>
+  <data name="DistributionAssessments" xml:space="preserve">
+    <value>Distribution Assessments</value>
+  </data>
+  <data name="DoYouWantToActivationEvent" xml:space="preserve">
+    <value>Do You Want To Activation This Event?</value>
+  </data>
+  <data name="DoYouWantToDuplicateThisEvent" xml:space="preserve">
+    <value>Do You Want To Duplicate This Event ?</value>
+  </data>
+  <data name="DoYouWantToExitWithoutSaving" xml:space="preserve">
+    <value>Do You Want To Exit Without Saving ?</value>
+  </data>
+  <data name="DoYouWantToFinishEvent" xml:space="preserve">
+    <value>Do You Want To Finish Event?</value>
+  </data>
+  <data name="DoYouWantToMoveThisEventToArchive" xml:space="preserve">
+    <value>DoYouWantToMoveThisEventToArchive ?</value>
+  </data>
+  <data name="Duplicate" xml:space="preserve">
+    <value>duplicate</value>
+  </data>
+  <data name="DuplicateFormMessage" xml:space="preserve">
+    <value>You Are going to duplicate form</value>
+  </data>
+  <data name="DuplicateFormMessageTitle" xml:space="preserve">
+    <value>Warning Duplicate Form</value>
+  </data>
+  <data name="DuplicateItem" xml:space="preserve">
+    <value>Duplicate Item</value>
+  </data>
+  <data name="DuplicateTestDescription" xml:space="preserve">
+    <value>On this screen you can duplicate an existing {0}
+, Please change the name {0}.</value>
+  </data>
+  <data name="DuplicateTestScreen" xml:space="preserve">
+    <value>duplicating {0}</value>
+  </data>
+  <data name="DuplicateUserName" xml:space="preserve">
+    <value>This user name already in use. Please select a different name</value>
+  </data>
+  <data name="duplicating" xml:space="preserve">
+    <value>duplicating</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="EditActiveFormMessage" xml:space="preserve">
+    <value>Making a change to an active form may affect an event that contains this form, you should create a same new form by clicking the Duplicate button</value>
+  </data>
+  <data name="EditActiveFormMessageTitle" xml:space="preserve">
+    <value>Warning - Edit active form</value>
+  </data>
+  <data name="EditTestDescription" xml:space="preserve">
+    <value>Edit {0} Description In This Screen.</value>
+  </data>
+  <data name="EditTestScreen" xml:space="preserve">
+    <value>Edit Exist {0}</value>
+  </data>
+  <data name="EmptyValue" xml:space="preserve">
+    <value>Empty Value</value>
+  </data>
+  <data name="EMSClientName" xml:space="preserve">
+    <value>EG</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="EndPostingDate" xml:space="preserve">
+    <value>End PostingDate</value>
+  </data>
+  <data name="EndRankDate" xml:space="preserve">
+    <value>End Rank Date</value>
+  </data>
+  <data name="EnterOrganizationName" xml:space="preserve">
+    <value>Enter Organization Name</value>
+  </data>
+  <data name="Evaluatedes" xml:space="preserve">
+    <value>Evaluated</value>
+  </data>
+  <data name="Evaluation" xml:space="preserve">
+    <value>Evaluation</value>
+  </data>
+  <data name="EvaluationGenerator" xml:space="preserve">
+    <value>Evaluation Generator</value>
+  </data>
+  <data name="EvaluationMap" xml:space="preserve">
+    <value>Evaluation Map</value>
+  </data>
+  <data name="EvaluationMapText" xml:space="preserve">
+    <value>Evaluation Map Text</value>
+  </data>
+  <data name="EvaluationModel" xml:space="preserve">
+    <value>Evaluation Model</value>
+  </data>
+  <data name="EvaluationModelText" xml:space="preserve">
+    <value>Determine an evaluation model type</value>
+  </data>
+  <data name="EvaluationRelations" xml:space="preserve">
+    <value>Evaluation Relations</value>
+  </data>
+  <data name="EvaluationSummary" xml:space="preserve">
+    <value>Summary of individual assessments</value>
+  </data>
+  <data name="EvaluationTools" xml:space="preserve">
+    <value>Evaluation Tools</value>
+  </data>
+  <data name="Evaluators" xml:space="preserve">
+    <value>Evaluators</value>
+  </data>
+  <data name="EventGenerator" xml:space="preserve">
+    <value>Event Generator</value>
+  </data>
+  <data name="EventId" xml:space="preserve">
+    <value>Event num</value>
+  </data>
+  <data name="EventName" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="EventsList" xml:space="preserve">
+    <value>Events List</value>
+  </data>
+  <data name="EvReportTitle" xml:space="preserve">
+    <value>Assessment  Report  by Fields</value>
+  </data>
+  <data name="Execution" xml:space="preserve">
+    <value>Execution</value>
+  </data>
+  <data name="Expand" xml:space="preserve">
+    <value>Expand</value>
+  </data>
+  <data name="ExpandAll" xml:space="preserve">
+    <value>Expand All</value>
+  </data>
+  <data name="Family" xml:space="preserve">
+    <value>Family</value>
+  </data>
+  <data name="Female" xml:space="preserve">
+    <value>Female</value>
+  </data>
+  <data name="FillPercentage" xml:space="preserve">
+    <value>Fill Percentage</value>
+  </data>
+  <data name="FinishEvent" xml:space="preserve">
+    <value>Finish Event</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="Form" xml:space="preserve">
+    <value>Form</value>
+  </data>
+  <data name="FormName" xml:space="preserve">
+    <value>Form Name</value>
+  </data>
+  <data name="FormNameRequired" xml:space="preserve">
+    <value>Form Name Required</value>
+  </data>
+  <data name="Forms" xml:space="preserve">
+    <value>Forms</value>
+  </data>
+  <data name="FormTypeRequired" xml:space="preserve">
+    <value>Form Type Required</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full Name</value>
+  </data>
+  <data name="FullNameUserEdit" xml:space="preserve">
+    <value>Last user updated</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="GeneralSettings" xml:space="preserve">
+    <value>General Settings</value>
+  </data>
+  <data name="GoodQuestionnaires" xml:space="preserve">
+    <value>Good Questionnaires</value>
+  </data>
+  <data name="GoOn" xml:space="preserve">
+    <value>Go On</value>
+  </data>
+  <data name="HowCalculate" xml:space="preserve">
+    <value>How to calculate</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Index</value>
+  </data>
+  <data name="IndexName" xml:space="preserve">
+    <value>Index name</value>
+  </data>
+  <data name="InputMassPermission" xml:space="preserve">
+    <value>Input In Mass Permission</value>
+  </data>
+  <data name="InstructionsToFillForm" xml:space="preserve">
+    <value>Instructions To Fill Form</value>
+  </data>
+  <data name="InterviewDescription" xml:space="preserve">
+    <value>Interview Description</value>
+  </data>
+  <data name="InterviewType" xml:space="preserve">
+    <value>Interview Type</value>
+  </data>
+  <data name="Introduction" xml:space="preserve">
+    <value>Introduction</value>
+  </data>
+  <data name="IntroductionRequired" xml:space="preserve">
+    <value>Introduction Required</value>
+  </data>
+  <data name="IntroductionText" xml:space="preserve">
+    <value>Introduction Text</value>
+  </data>
+  <data name="ItemNotSelected" xml:space="preserve">
+    <value>Item Not Selected</value>
+  </data>
+  <data name="ItemsFromExistForm" xml:space="preserve">
+    <value>Items from exist forms</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="lblActive" xml:space="preserve">
+    <value>Active:</value>
+  </data>
+  <data name="lblAdditionalOrganizationsPermission" xml:space="preserve">
+    <value>Additional Organizations Permission:</value>
+  </data>
+  <data name="lblAge" xml:space="preserve">
+    <value>Age:</value>
+  </data>
+  <data name="lblCandidateDetailsPageTitle" xml:space="preserve">
+    <value>Candidate Ticket</value>
+  </data>
+  <data name="lblDateOfBirth" xml:space="preserve">
+    <value>Date Of Birth:</value>
+  </data>
+  <data name="lblDescription" xml:space="preserve">
+    <value>Description:</value>
+  </data>
+  <data name="lblFirstName" xml:space="preserve">
+    <value>FirstName:</value>
+  </data>
+  <data name="lblLastName" xml:space="preserve">
+    <value>LastName:</value>
+  </data>
+  <data name="lblLogo" xml:space="preserve">
+    <value>Logo:</value>
+  </data>
+  <data name="lblName" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="lblOrganization" xml:space="preserve">
+    <value>Organization:</value>
+  </data>
+  <data name="lblPassword" xml:space="preserve">
+    <value>Password:</value>
+  </data>
+  <data name="lblPersonalNumber" xml:space="preserve">
+    <value>PersonalNumber:</value>
+  </data>
+  <data name="lblRole" xml:space="preserve">
+    <value>Role:</value>
+  </data>
+  <data name="lblSite" xml:space="preserve">
+    <value>Site:</value>
+  </data>
+  <data name="lblUnitPermission" xml:space="preserve">
+    <value>Units Permissions</value>
+  </data>
+  <data name="lblUserDetailsPageTitle" xml:space="preserve">
+    <value>User Details</value>
+  </data>
+  <data name="lblUserName" xml:space="preserve">
+    <value>User Name:</value>
+  </data>
+  <data name="lblUserType" xml:space="preserve">
+    <value>User Type:</value>
+  </data>
+  <data name="Left" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="Legend" xml:space="preserve">
+    <value>Legend</value>
+  </data>
+  <data name="LegendNorm" xml:space="preserve">
+    <value>Norma is a metric calculated for all command levels (and for some of the core roles), by rank, corps and unit type, once every three years.</value>
+  </data>
+  <data name="LegendScala" xml:space="preserve">
+    <value>Evaluation scale ranges from 7 (very high) to 1 (very low)</value>
+  </data>
+  <data name="LegendStandardDeviation" xml:space="preserve">
+    <value>StandardDeviation = degree of disagreement between the evaluators. High dispersion (low degree of agreement) will be considered above 1.2.</value>
+  </data>
+  <data name="LocatingEvaluators" xml:space="preserve">
+    <value>Locating Evaluators</value>
+  </data>
+  <data name="LocatingEvaluatorsText" xml:space="preserve">
+    <value>Locating Evaluators Text</value>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>Log In</value>
+  </data>
+  <data name="LogInCaption" xml:space="preserve">
+    <value>Login to {0} system</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="Male" xml:space="preserve">
+    <value>Male</value>
+  </data>
+  <data name="Management" xml:space="preserve">
+    <value>Management and control</value>
+  </data>
+  <data name="MeasuringUnit" xml:space="preserve">
+    <value>Measuring unit</value>
+  </data>
+  <data name="MeetsCriterion" xml:space="preserve">
+    <value>Meets Criterion</value>
+  </data>
+  <data name="MinuyText" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="MissingWhoIsEvaluatingWho" xml:space="preserve">
+    <value>Missing Who Is Evaluating Whom</value>
+  </data>
+  <data name="Move" xml:space="preserve">
+    <value>Move</value>
+  </data>
+  <data name="MoveToArchive" xml:space="preserve">
+    <value>Move To Archive</value>
+  </data>
+  <data name="MoveToExecution" xml:space="preserve">
+    <value>Move To Execution</value>
+  </data>
+  <data name="MoveToRepository" xml:space="preserve">
+    <value>Moved To Repository</value>
+  </data>
+  <data name="MustChooseOneOptionFromList" xml:space="preserve">
+    <value>Must Choose One Option From List</value>
+  </data>
+  <data name="MustChooseScalas" xml:space="preserve">
+    <value>Must Choose Scalas</value>
+  </data>
+  <data name="MustFillOnePotential" xml:space="preserve">
+    <value>At least one field should be filled with potential properties</value>
+  </data>
+  <data name="MustHaveItems" xml:space="preserve">
+    <value>Chapter must include at least one question</value>
+  </data>
+  <data name="MustIncludeOneRow" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MustSaveNotification" xml:space="preserve">
+    <value>Must save before continue</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NameExist" xml:space="preserve">
+    <value>Name Exist</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>New User</value>
+  </data>
+  <data name="Nickname" xml:space="preserve">
+    <value>Nick name</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NotDraftForm" xml:space="preserve">
+    <value>Not edit form a non-status Draft !</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Note</value>
+  </data>
+  <data name="NoteThatYouAreAboutToDeleteaUser" xml:space="preserve">
+    <value>Note That You Are About To Deletea User</value>
+  </data>
+  <data name="NotSaved" xml:space="preserve">
+    <value>Fail</value>
+  </data>
+  <data name="Num" xml:space="preserve">
+    <value>Num</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="OneOrMoreOfTheIdentifyingInformationYouTypedIsIncorrect" xml:space="preserve">
+    <value>One Or More Of The Id entifying Information You Typed Is Incorrect</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="OrganizationalAdmin" xml:space="preserve">
+    <value>Organizational Admin</value>
+  </data>
+  <data name="OrganizationalStructure" xml:space="preserve">
+    <value>Organizational structure</value>
+  </data>
+  <data name="P.N" xml:space="preserve">
+    <value>P.N.</value>
+  </data>
+  <data name="Participants" xml:space="preserve">
+    <value>Participants</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password is required</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Paused" xml:space="preserve">
+    <value>Paused</value>
+  </data>
+  <data name="PermissionDenied" xml:space="preserve">
+    <value>Permission Denied</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>Personal information</value>
+  </data>
+  <data name="PersonalNumber" xml:space="preserve">
+    <value>Personal Number</value>
+  </data>
+  <data name="PersonalNumberNotExist" xml:space="preserve">
+    <value>Personal Number Not Exist</value>
+  </data>
+  <data name="PersonalQuestionnaireForm" xml:space="preserve">
+    <value>Personal Questionnaire Form</value>
+  </data>
+  <data name="PleaseWait" xml:space="preserve">
+    <value>Please Wait</value>
+  </data>
+  <data name="PotentialParticipants" xml:space="preserve">
+    <value>Potential Participants</value>
+  </data>
+  <data name="PotentialProperties" xml:space="preserve">
+    <value>Potential Properties</value>
+  </data>
+  <data name="Preparation" xml:space="preserve">
+    <value>Preparation</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ProduceReport" xml:space="preserve">
+    <value>Produce Report</value>
+  </data>
+  <data name="ProfessionalRecommendations" xml:space="preserve">
+    <value>Professional recommendations</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Questionnaire" xml:space="preserve">
+    <value>Questionnaire</value>
+  </data>
+  <data name="QuestionsDefinition" xml:space="preserve">
+    <value>Questions Definition</value>
+  </data>
+  <data name="QuestionsNumber" xml:space="preserve">
+    <value>Questions Number</value>
+  </data>
+  <data name="QuestionText" xml:space="preserve">
+    <value>Question Text</value>
+  </data>
+  <data name="RadioButtons" xml:space="preserve">
+    <value>Radio Buttons</value>
+  </data>
+  <data name="Rank" xml:space="preserve">
+    <value>Rank</value>
+  </data>
+  <data name="Ranks" xml:space="preserve">
+    <value>Ranks</value>
+  </data>
+  <data name="RefreshPotential" xml:space="preserve">
+    <value>Refresh Potential</value>
+  </data>
+  <data name="RegularUser" xml:space="preserve">
+    <value>Regular User</value>
+  </data>
+  <data name="Remark" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="Remarks" xml:space="preserve">
+    <value>Remarks</value>
+  </data>
+  <data name="RemoveReason" xml:space="preserve">
+    <value>Remove Reason</value>
+  </data>
+  <data name="RequiredFieldValidatorErrorMessage" xml:space="preserve">
+    <value>Required Value</value>
+  </data>
+  <data name="ResponsibleFactor" xml:space="preserve">
+    <value>Responsible Factor</value>
+  </data>
+  <data name="Right" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="RowsCountNotification" xml:space="preserve">
+    <value>The table must contain at least one row</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveAndContinue" xml:space="preserve">
+    <value>Save and continue</value>
+  </data>
+  <data name="SaveAndExit" xml:space="preserve">
+    <value>Save And Exit</value>
+  </data>
+  <data name="SavedSuccessfully" xml:space="preserve">
+    <value>Saved Successfully</value>
+  </data>
+  <data name="SaveFormNotification" xml:space="preserve">
+    <value>Form saves successfully</value>
+  </data>
+  <data name="SaveFormPropertiesNotification" xml:space="preserve">
+    <value>Successfully Save Form Properties!</value>
+  </data>
+  <data name="SaveItemsNotification" xml:space="preserve">
+    <value>Successfully Save Item Form</value>
+  </data>
+  <data name="SaveLoader" xml:space="preserve">
+    <value>Loading</value>
+  </data>
+  <data name="SaveTreeNotification" xml:space="preserve">
+    <value>Update Tree succeeded</value>
+  </data>
+  <data name="Saving" xml:space="preserve">
+    <value>Saving</value>
+  </data>
+  <data name="ScalaNumber" xml:space="preserve">
+    <value>Scala Number</value>
+  </data>
+  <data name="ScalaRange" xml:space="preserve">
+    <value>Scala Range</value>
+  </data>
+  <data name="ScalaText" xml:space="preserve">
+    <value>Scala Text</value>
+  </data>
+  <data name="Scale" xml:space="preserve">
+    <value>Scale</value>
+  </data>
+  <data name="ScaleDir" xml:space="preserve">
+    <value>Scale Direction</value>
+  </data>
+  <data name="Score" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="ScreenSavedSuccessfully" xml:space="preserve">
+    <value>Screen Saved Successfully</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Season" xml:space="preserve">
+    <value>Season</value>
+  </data>
+  <data name="SeasonName" xml:space="preserve">
+    <value>Season Name</value>
+  </data>
+  <data name="SeasonNumber" xml:space="preserve">
+    <value>Season Number</value>
+  </data>
+  <data name="SeasonProperty" xml:space="preserve">
+    <value>Season Property</value>
+  </data>
+  <data name="SeasonSettings" xml:space="preserve">
+    <value>Season Settings</value>
+  </data>
+  <data name="SeasonsList" xml:space="preserve">
+    <value>Seasons List</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="SelectInterview" xml:space="preserve">
+    <value>Select interview</value>
+  </data>
+  <data name="SelectOrganizations" xml:space="preserve">
+    <value>Select Organizations..</value>
+    <comment>Characters</comment>
+  </data>
+  <data name="SelectUnitInfo" xml:space="preserve">
+    <value>To select the unit, please select the units and click the arrow</value>
+  </data>
+  <data name="ServiceType" xml:space="preserve">
+    <value>Service Type</value>
+  </data>
+  <data name="SetConnections" xml:space="preserve">
+    <value>Set Connections</value>
+  </data>
+  <data name="SettingIntroduction" xml:space="preserve">
+    <value>Introduction setting</value>
+  </data>
+  <data name="SettingScales" xml:space="preserve">
+    <value>Setting Scales</value>
+  </data>
+  <data name="ShowNotActiveforms" xml:space="preserve">
+    <value>Show Not Active forms</value>
+  </data>
+  <data name="Sociometric" xml:space="preserve">
+    <value>Sociometric</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Special" xml:space="preserve">
+    <value>Special</value>
+  </data>
+  <data name="StandardDeviation" xml:space="preserve">
+    <value>Standard Deviation</value>
+  </data>
+  <data name="StarModel" xml:space="preserve">
+    <value>Star Model model</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="StartPostingDate" xml:space="preserve">
+    <value>Start Posting Date</value>
+  </data>
+  <data name="StartRankDate" xml:space="preserve">
+    <value>Start Rank Date</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Subject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="SubjectsTreeEditing" xml:space="preserve">
+    <value>Subjects Tree Editing</value>
+  </data>
+  <data name="SubjectTree" xml:space="preserve">
+    <value>Subject Tree</value>
+  </data>
+  <data name="SubUnitModel" xml:space="preserve">
+    <value>Sub Unit model</value>
+  </data>
+  <data name="SystemAdmin" xml:space="preserve">
+    <value>System Admin</value>
+  </data>
+  <data name="SystemLanguage" xml:space="preserve">
+    <value>System language</value>
+  </data>
+  <data name="Tabular" xml:space="preserve">
+    <value>Tabular</value>
+  </data>
+  <data name="Textual" xml:space="preserve">
+    <value>Textual</value>
+  </data>
+  <data name="ToConservation" xml:space="preserve">
+    <value>To Conservation:</value>
+  </data>
+  <data name="ToFinish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="ToImprovement" xml:space="preserve">
+    <value>To Improvement:</value>
+  </data>
+  <data name="Tool" xml:space="preserve">
+    <value>Tool</value>
+  </data>
+  <data name="ToolConstitution" xml:space="preserve">
+    <value>Tool Constitution</value>
+  </data>
+  <data name="ToolProperty" xml:space="preserve">
+    <value>Tool Property</value>
+  </data>
+  <data name="TurnOffForm" xml:space="preserve">
+    <value>Turn Off Form</value>
+  </data>
+  <data name="TurnOffTestNotification" xml:space="preserve">
+    <value>The form was successfully Inactive!</value>
+  </data>
+  <data name="TurnOnForm" xml:space="preserve">
+    <value>Turn On Form</value>
+  </data>
+  <data name="TurnOnFormMessage" xml:space="preserve">
+    <value>You are going to turn off form</value>
+  </data>
+  <data name="TurnOnFormNotification" xml:space="preserve">
+    <value>Turn on form succeeded !</value>
+  </data>
+  <data name="TurnOnMessageTitle" xml:space="preserve">
+    <value>Warning - turn off form</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Unit" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="UnitEnrichmentsList" xml:space="preserve">
+    <value>Units Enrichments </value>
+  </data>
+  <data name="UnitEvaluated" xml:space="preserve">
+    <value>Unit Evaluated</value>
+  </data>
+  <data name="UnitEvaluates" xml:space="preserve">
+    <value>Unit Evaluates</value>
+  </data>
+  <data name="Units" xml:space="preserve">
+    <value>Units</value>
+  </data>
+  <data name="UnitsEnrichment" xml:space="preserve">
+    <value>Units Enrichment</value>
+  </data>
+  <data name="UnitsTree" xml:space="preserve">
+    <value>Units Tree</value>
+  </data>
+  <data name="UpdateDate" xml:space="preserve">
+    <value>Last Update Date</value>
+  </data>
+  <data name="UpdateOrganizationalStructure" xml:space="preserve">
+    <value>Update Organizational Structure</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="UserNameRequired" xml:space="preserve">
+    <value>User name is required</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="UserType" xml:space="preserve">
+    <value>UserType</value>
+  </data>
+  <data name="VerbalAssessments" xml:space="preserve">
+    <value>Verbal Assessments</value>
+  </data>
+  <data name="vldAlreadyAddedOrganization" xml:space="preserve">
+    <value>You have Already Added this Organization</value>
+  </data>
+  <data name="vldFirstNameRequired" xml:space="preserve">
+    <value>First Name Required</value>
+  </data>
+  <data name="vldIdRequired" xml:space="preserve">
+    <value>Id Required</value>
+  </data>
+  <data name="vldLastNameRequired" xml:space="preserve">
+    <value>Last Name Required</value>
+  </data>
+  <data name="vldOrganizationNameExist" xml:space="preserve">
+    <value>The name of the organization already exists</value>
+  </data>
+  <data name="vldOrganizationNameRequired" xml:space="preserve">
+    <value>Organization Name Required</value>
+  </data>
+  <data name="vldOrganizationRequired" xml:space="preserve">
+    <value>Organization Required</value>
+  </data>
+  <data name="vldUnitRequired" xml:space="preserve">
+    <value>Must check at least one unit</value>
+  </data>
+  <data name="vldUserTypesRequired" xml:space="preserve">
+    <value>User Types Required</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="Weight" xml:space="preserve">
+    <value>Weight</value>
+  </data>
+  <data name="WithoutPermission" xml:space="preserve">
+    <value>Without Permission</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="YouAreGoingMoveToExecution" xml:space="preserve">
+    <value>Clicking "Move to Execute" causes immediate emails to all evaluators. Do you want to continue? "</value>
+  </data>
+  <data name="YouAreGoingToDeleteTheEvent" xml:space="preserve">
+    <value>You Are Going To Delete The Event, all the existing data will get lost</value>
+  </data>
+</root>

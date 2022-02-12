@@ -1,0 +1,15 @@
+גדוד שריון - משהtime to generate: 00:00:01.6487775
+גדוד שריון - משהtime to generate: 00:00:02.7467740
+גדוד שריון - משהtime to generate: 00:00:00.3066771
+צק"ח שריון משהtime to generate: 00:00:53.0765201
+צק"ח שריון משהtime to generate: 00:01:06.1024311
+צק"ח שריון משהtime to generate: 00:00:58.5850678
+חטיבה משהtime to generate: 00:00:31.6737004
+צק"ח שריון משהtime to generate: 00:01:11.9841316
+צק"ח שריון משהtime to generate: 00:01:02.7114792
+report: גדוד שריון - משהtime to generate: 00:00:01.9302160
+name: לוחם אשtime to generate: 00:00:00.2367797
+name: משמרת כיבוי והצלהtime to generate: 00:01:00.9554374
+name: תחנת כיבויtime to generate: 00:03:16.3285861
+name: צק"ח שריון משהtime to generate: 00:00:59.8554702
+name: צק"ח שריון משהtime to generate: 00:01:01.6590988
