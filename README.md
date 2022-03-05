@@ -61,7 +61,6 @@ This model displays the capabilities a state requires to deal with an emergency.
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 
 ### Prevention Model Description:
 
@@ -86,7 +85,6 @@ This model displays protection capabilities to protect communities from any kind
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 
 ### Mitigation Model Description:
 
@@ -97,7 +95,6 @@ This model displays mitigation opportunities prior to a disaster.
 </p>
 
 
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -112,7 +109,6 @@ This model displays capabilities needed to prepare for disasters. It includes em
 
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
 
 ### Response Model Description:
 
@@ -122,9 +118,9 @@ This model displays capabilities needed to prepare for disasters. It includes em
 
 This model displays the required capabilities needed of each response agency to minimize casualties and property loss.
 
-## 
-## 
-## 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ### Recovery Model Description:
 
 This model displays recovery capabilities and support operations post-disaster. 
@@ -133,9 +129,9 @@ This model displays recovery capabilities and support operations post-disaster.
   <img src="image/Aspose.Words.a86c918a-939a-42df-a81d-652c2fc9cc26.013.png?raw=true" />
 </p>
 
-## 
-## 
-## 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ### Diversity Model Description:
 
 This model displays diversity, equity, and inclusion (DEI) prioritization strategies to support an agency’s decision-making processes. It recommends DEI considerations in all phases of emergency management. 
@@ -144,11 +140,16 @@ This model displays diversity, equity, and inclusion (DEI) prioritization strate
   <img src="image/Aspose.Words.a86c918a-939a-42df-a81d-652c2fc9cc26.014.jpeg?raw=true" />
 </p>
 
-# 
-# 
-# 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 # 4 Phase V1.0 Model
-# 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ## **Emergency Management**
 
 |**Professional recommendations**|<p>**Measuring unit**</p><p></p>|<p>**Calculation rule**</p><p></p>|<p>**Data Dictionary**</p><p></p>|<p>**Index name**</p><p></p>|
@@ -162,7 +163,7 @@ This model displays diversity, equity, and inclusion (DEI) prioritization strate
 |Outline policies and practices to prevent, respond to, and address harassment. Implement training, education, and monitoring practices to create a culture that does not tolerate harassment or other forms of discrimination.|<p>percentage</p><p></p>||<p>Metric</p><p></p>|<p>Comprehensive framework to address  workplace harassment </p><p></p>|
 |Assess access to information technologies, reasonable accommodations for employees to perform the essential functions of their role. A workforce that includes people with disabilities is a stronger and more effective workplace.||<p>Weighted\_Average</p><p></p>|<p>KPI</p><p></p>|<p>Advancing Equity for Employees with Disabilities </p><p></p>|
 
-
+<p>&nbsp;</p>
 
 |**Professional recommendations**|<p>**Measuring unit**</p><p></p>|<p>**Calculation rule**</p><p></p>|<p>**Data Dictionary**</p><p></p>|<p>**Index name**</p><p></p>|
 | :-: | :-: | :-: | :-: | :-: |
@@ -174,7 +175,7 @@ This model displays diversity, equity, and inclusion (DEI) prioritization strate
 |Gather and highlight success stories on plan implementation, plan integration, outreach, engagement and equity in diverse communities. Incorporate engagement forms or mechanisms for communities to share their challenges and successes. |<p>percentage</p><p></p>||<p>Metric</p><p></p>|<p>Stakeholder engagement to develop effective and equitable individual and family mitigation practices</p><p></p>|
 |<p>Develop stakeholder engagement initiatives to interact with the whole community and build formal and informal partners to develop solutions. Barriers to participating in mitigation activities are removed and training, language access, transportation, meals and/or childcare are provided. </p><p></p>||<p>Weighted\_Average</p><p></p>|<p>KPI</p><p></p>|<p>Partnerships development to champion mitigation initiatives </p><p></p>|
 
-
+<p>&nbsp;</p>
 
 |**Professional recommendations**|<p>**Measuring unit**</p><p></p>|<p>**Calculation rule**</p><p></p>|<p>**Data Dictionary**</p><p></p>|<p>**Index name**</p><p></p>|
 | :-: | :-: | :-: | :-: | :-: |
@@ -188,7 +189,7 @@ This model displays diversity, equity, and inclusion (DEI) prioritization strate
 |Identify multi-modal communication methods based on demographics, access to internet, English as a second language. Conducting outreach in Spanish, knocking on doors (boots on the ground), calling people on the phone. Diversifying approaches without assuming everyone has access to internet or has English proficiency.  ||<p>Weighted\_Average</p><p></p>|<p>KPI</p><p></p>|<p>Effective communication with the community </p><p></p>|
 |Develop training and drills based on local hazards and threats to individuals, families, and properties. Prioritize accessible approaches for the community to learn how to build an emergency kit, build an evacuation plan, evacuate and/or shelter in place. |<p>percentage</p><p></p>||<p>Metric</p><p></p>|<p>Training the community based on diversity and equity needs</p><p></p>|
 
-
+<p>&nbsp;</p>
 
 |**Professional recommendations**|<p>**Measuring unit**</p><p></p>|<p>**Calculation rule**</p><p></p>|<p>**Data Dictionary**</p><p></p>|<p>**Index name**</p><p></p>|
 | :-: | :-: | :-: | :-: | :-: |
