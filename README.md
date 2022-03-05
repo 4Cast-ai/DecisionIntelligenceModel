@@ -8,8 +8,11 @@
 
 <p>&nbsp;</p>
 
+<span style="color:blue">
+
 # **4Cast Platform**
 
+</span>
 <p>&nbsp;</p>
 
 ## Data Dictionary
