@@ -44,7 +44,7 @@
 
 ## **Emergency Management**
 
-Emergency Management Model Description:
+### Emergency Management Model Description:
 
 This model displays the capabilities a state requires to deal with an emergency. It details each stage from prevention to recovery and touches on every aspect of life and rescue in the event of a disaster or emergency. Also, it shows the state’s readiness level to deal with various scenarios.
 
