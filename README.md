@@ -40,12 +40,15 @@
 #### 3. “Inclusion.” *Merriam-Webster.com Dictionary*, Merriam-Webster, https://www.merriam-webster.com/dictionary/inclusion. Accessed 16 Feb. 2022.
 
 
-##
-##
-##
+<p>&nbsp;</p>
+
 # Model Descriptions
 
+<p>&nbsp;</p>
+
 ## **Emergency Management**
+
+<p>&nbsp;</p>
 
 ### Emergency Management Model Description:
 
@@ -56,9 +59,10 @@ This model displays the capabilities a state requires to deal with an emergency.
 </p>
 
 
-##  
-##  
-##  
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ### Prevention Model Description:
 
 <p align="center">
@@ -67,9 +71,10 @@ This model displays the capabilities a state requires to deal with an emergency.
 
 The most effective way to deal with a human hazard is to prevent it. This model displays the range of issues agencies are required to focus on to prevent scenarios and it also provides recommendations for implementation. 
 
-## 
-## 
-## 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ### Protection Model Description:
 
 This model displays protection capabilities to protect communities from any kind of hazard e.g., Cybersecurity, natural disaster, active shooter, etc.  
@@ -78,9 +83,11 @@ This model displays protection capabilities to protect communities from any kind
   <img src="image/Aspose.Words.a86c918a-939a-42df-a81d-652c2fc9cc26.009.png?raw=true" />
 </p>
 
-## 
-## 
-##
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ### Mitigation Model Description:
 
 This model displays mitigation opportunities prior to a disaster.
@@ -89,9 +96,11 @@ This model displays mitigation opportunities prior to a disaster.
   <img src="image/Aspose.Words.a86c918a-939a-42df-a81d-652c2fc9cc26.010.png?raw=true" />
 </p>
 
-## 
-## 
-## 
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ### Preparedness Model Description:
 
 This model displays capabilities needed to prepare for disasters. It includes emergency support functions, core capabilities, programs, standards, and community lifelines.
@@ -101,9 +110,10 @@ This model displays capabilities needed to prepare for disasters. It includes em
   <img src="image/Aspose.Words.a86c918a-939a-42df-a81d-652c2fc9cc26.011.png?raw=true" />
 </p>
 
-## 
-## 
-## 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 ### Response Model Description:
 
 <p align="center">
