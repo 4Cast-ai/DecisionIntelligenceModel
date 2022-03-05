@@ -28,19 +28,21 @@
 |**Competence**|The ability required to do something well or accomplish an objective. The competence is typically represented by a [model](#model) in the [4Cast Platform](#platform).||
 |**Performance**|How well an entity performs its actions that affect its [competence](#Comprtrnce). The performance is typically represented by a report in the [4Cast Platform](#platform).||
 |**Readiness**|Willingness or the state of being prepared for something. ||
-|<p><https://training.fema.gov/is/courseoverview.aspx?code=IS-20.22></p><p>
-    </p><p>**Diversity [^1]**</p>|Acknowledging, understanding, accepting, valuing, and respecting the variety of characteristics that make individuals unique. ||
-|<p><https://www.fema.gov/press-release/20210909/fema-defines-equity-its-mission-making-programs-more-accessible></p><p>
-    </p><p>**Equity [^2]**</p>|The consistent and systematic fair, just and impartial treatment of all individuals.||
-|<p>“Inclusion.” *Merriam-Webster.com Dictionary*, Merriam-Webster, https://www.merriam-webster.com/dictionary/inclusion. Accessed 16 Feb. 2022.</p><p>
-    </p><p>**Inclusion[^3]** </p>|<p>The act or practice of including and accommodating people who have historically been excluded (as because of their race, gender, sexuality, or ability). </p><p></p>||
+|**Diversity [^1]**|Acknowledging, understanding, accepting, valuing, and respecting the variety of characteristics that make individuals unique. ||
+|**Equity [^2]**|The consistent and systematic fair, just and impartial treatment of all individuals.||
+|**Inclusion[^3]**|The act or practice of including and accommodating people who have historically been excluded (as because of their race, gender, sexuality, or ability).||
+
+#### 1. <https://training.fema.gov/is/courseoverview.aspx?code=IS-20.22>
+#### 2. <https://www.fema.gov/press-release/20210909/fema-defines-equity-its-mission-making-programs-more-accessible>
+#### 3. “Inclusion.” *Merriam-Webster.com Dictionary*, Merriam-Webster, https://www.merriam-webster.com/dictionary/inclusion. Accessed 16 Feb. 2022.
 
 
+##
+##
+##
+# Model Descriptions
 
-# 
-## Model Descriptions
-
-### **Emergency Management**
+## **Emergency Management**
 
 Emergency Management Model Description:
 
