@@ -6,9 +6,9 @@
   <img src="image/Aspose.Words.a86c918a-939a-42df-a81d-652c2fc9cc26.002.png?raw=true" />
 </p>
 
-#
+<p>&nbsp;</p>
 # **4Cast Platform**
-# 
+<p>&nbsp;</p>
 ## Data Dictionary
 
 |Component|Description|Notes|
